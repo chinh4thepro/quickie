@@ -21,13 +21,7 @@ Rectangle {
 
         Text {
             id: time
-            text: Qt.formatDateTime(clock.date, "hh:mm:ss")
-            color: Colors.foreground
-        }
-
-        Text {
-            id: date
-            text: Qt.formatDateTime(clock.date, "MM/dd/yyyy")
+            text: Qt.formatDateTime(clock.date, "hh:mm:ss MM/dd/yyyy")
             color: Colors.foreground
         }
     }

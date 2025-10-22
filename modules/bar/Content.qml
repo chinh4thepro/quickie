@@ -27,6 +27,18 @@ Item {
             bottom: parent.bottom
             left: parent.left
             right: center.right
+            topMargin: Global.borderWidth
+            bottomMargin: Global.borderWidth
+            leftMargin: Global.borderWidth
+            rightMargin: 0
+        }
+
+        spacing: Global.barContentSpacing
+
+        Group {
+            id: leftGroup
+
+            Clock {}
         }
     }
 
@@ -37,6 +49,18 @@ Item {
             top: parent.top
             bottom: parent.bottom
             horizontalCenter: parent.horizontalCenter
+            topMargin: Global.borderWidth
+            bottomMargin: Global.borderWidth
+            leftMargin: 0
+            rightMargin: 0
+        }
+
+        spacing: Global.barContentSpacing
+
+        Group {
+            id: centerGroup
+
+            Clock {}
         }
     }
 
@@ -48,6 +72,18 @@ Item {
             bottom: parent.bottom
             left: center.right
             right: parent.right
+            topMargin: Global.borderWidth
+            bottomMargin: Global.borderWidth
+            leftMargin: 0
+            rightMargin: Global.borderWidth
+        }
+
+        spacing: Global.barContentSpacing
+
+        Group {
+            id: rightGroup
+
+            Clock {}
         }
     }
 }

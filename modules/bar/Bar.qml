@@ -28,14 +28,6 @@ Scope {
 
         implicitHeight: Global.barHeight
 
-        MouseArea {
-            id: mouseArea
-            hoverEnabled: true
-            anchors {
-                fill: parent
-            }
-        }
-
         Content {
             id: content
 

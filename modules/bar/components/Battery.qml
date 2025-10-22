@@ -5,14 +5,12 @@ import Quickshell.Services.UPower
 
 import qs.globals
 
-Rectangle {
+Item {
     id: root
     readonly property var state: UPower.displayDevice.state
     readonly property bool isCharging: state == UPowerDeviceState.Charging
     readonly property var isPlugged: isCharging || state == UPowerDeviceState.PendingCharge
     readonly property real percent: UPower.displayDevice.percentage
-
-    color: "transparent"
 
     Text {
         id: battery

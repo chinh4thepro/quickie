@@ -1,8 +1,7 @@
-import QtQuick
-import Quickshell
+import "modules/bar"
+import "modules/powermenu"
 
-import "Modules/Bar"
-import "Modules/PowerMenu"
+import Quickshell
 
 ShellRoot {
     id: root

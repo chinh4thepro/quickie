@@ -5,57 +5,47 @@ import Quickshell
 import qs.globals
 import "components"
 
-PanelWindow {
-    id: root
+Scope {
+    id: bar
 
-    anchors {
-        top: false
-        bottom: true
-        left: true
-        right: true
-    }
+    PanelWindow {
+        id: barRoot
 
-    margins {
-        top: 0
-        bottom: 25
-        left: 25
-        right: 25
-    }
-
-    implicitHeight: screen.height / 20
-
-    color: "transparent"
-
-    Rectangle {
-        id: bar
-
-        anchors.fill: parent
-
-        border {
-            color: Colors.foreground
-            width: 4
+        anchors {
+            top: false
+            bottom: true
+            left: true
+            right: true
         }
 
-        color: Colors.backgrounda
+        margins {
+            top: 0
+            bottom: Global.marginSize
+            left: Global.marginSize
+            right: Global.marginSize
+        }
 
-        RowLayout {
-            anchors.fill: parent
+        color: "transparent"
 
-            RowLayout {
-                Layout.alignment: Qt.AlignLeft
+        implicitHeight: Global.barHeight
 
-                Clock {}
+        MouseArea {
+            id: mouseArea
+            hoverEnabled: true
+            anchors {
+                fill: parent
             }
-            RowLayout {
-                Layout.alignment: Qt.AlignCenter
+        }
 
-                Clock {}
-                Battery {}
-            }
-            RowLayout {
-                Layout.alignment: Qt.AlignRight
+        Content {
+            id: content
 
-                Clock {}
+            implicitHeight: Global.barHeight
+            anchors {
+                top: parent.top
+                bottom: parent.bottom
+                left: parent.left
+                right: parent.right
             }
         }
     }

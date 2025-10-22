@@ -4,6 +4,9 @@ import QtQuick
 import Quickshell
 
 Singleton {
-    readonly property int screenWidth: screen.width
-    readonly property int screenHeight: screen.height
+    readonly property int barHeight: 50
+
+    readonly property int borderWidth: 4
+
+    readonly property int marginSize: 20
 }

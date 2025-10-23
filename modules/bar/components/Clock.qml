@@ -3,13 +3,8 @@ import QtQuick.Layouts
 import Quickshell
 import qs.globals
 
-Rectangle {
+Item {
     id: root
-
-    color: "transparent"
-
-    Layout.alignment: Qt.AlignCenter
-    Layout.fillHeight: true
 
     SystemClock {
         id: clock

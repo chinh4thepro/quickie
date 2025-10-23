@@ -6,32 +6,36 @@ import qs.globals
 Item {
     id: root
 
-    implicitWidth: layout.implicitWidth + Global.barContentPadding
+    property int padding: Global.borderWidth + Global.barContentPadding
+
+    implicitWidth: layout.implicitWidth + Global.barContentPadding * 2
     implicitHeight: Global.barHeight
 
     Rectangle {
         id: background
         anchors {
             fill: parent
-            topMargin: Global.barMargin
-            bottomMargin: Global.barMargin
-            leftMargin: Global.barMargin
-            rightMargin: Global.barMargin
+            topMargin: root.padding
+            bottomMargin: root.padding
+            leftMargin: 0
+            rightMargin: 0
         }
-        color: Colors.foreground
+        color: Colors.color3
     }
 
     GridLayout {
         id: layout
 
+        columns: -1
+
         anchors {
             verticalCenter: parent.verticalCenter
             left: parent.left
             right: parent.right
-            margins: Global.barContentPadding
+            margins: root.padding
         }
 
-        columnSpacing: Global.barContentSpacing
+        columnSpacing: 4
         rowSpacing: 12
     }
 }

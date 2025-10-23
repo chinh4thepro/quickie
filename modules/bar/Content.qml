@@ -26,7 +26,7 @@ Item {
             top: parent.top
             bottom: parent.bottom
             left: parent.left
-            right: center.right
+            right: center.left
             topMargin: Global.borderWidth
             bottomMargin: Global.borderWidth
             leftMargin: Global.borderWidth
@@ -38,7 +38,9 @@ Item {
         Group {
             id: leftGroup
 
-            Clock {}
+            anchors.verticalCenter: parent.verticalCenter
+
+            //Clock {}
         }
     }
 
@@ -59,6 +61,8 @@ Item {
 
         Group {
             id: centerGroup
+
+            anchors.verticalCenter: parent.verticalCenter
 
             Clock {}
         }
@@ -83,7 +87,9 @@ Item {
         Group {
             id: rightGroup
 
-            Clock {}
+            anchors.verticalCenter: parent.verticalCenter
+
+            // Clock {}
         }
     }
 }

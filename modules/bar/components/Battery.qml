@@ -11,10 +11,13 @@ Item {
     readonly property bool isCharging: state == UPowerDeviceState.Charging
     readonly property var isPlugged: isCharging || state == UPowerDeviceState.PendingCharge
     readonly property real percent: UPower.displayDevice.percentage
+    readonly property bool isBattery: UPower.displayDevice.isLaptopBattery
+
+    implicitWidth: childrenRect.width
 
     Text {
         id: battery
-        text: Math.round(root.percent * 100)
+        text: isBattery ? Math.round(root.percent * 100) : undefined
         color: Colors.foreground
     }
 }

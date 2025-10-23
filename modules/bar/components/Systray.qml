@@ -2,5 +2,8 @@ import Quickshell
 import QtQuick
 
 Item {
-    id: systray
+    id: root
+
+    implicitWidth: childrenRect.width
+    implicitHeight: childrenRect.height
 }

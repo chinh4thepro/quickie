@@ -7,6 +7,7 @@ Item {
     id: root
 
     property int padding: Global.borderWidth + Global.barContentPadding
+    default property alias items: layout.children
 
     implicitWidth: layout.implicitWidth + Global.barContentPadding * 2
     implicitHeight: Global.barHeight

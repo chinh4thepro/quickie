@@ -6,6 +6,9 @@ import qs.globals
 Item {
     id: root
 
+    implicitWidth: childrenRect.width
+    implicitHeight: childrenRect.height
+
     SystemClock {
         id: clock
         precision: SystemClock.Seconds

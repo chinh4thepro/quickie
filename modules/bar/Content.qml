@@ -26,10 +26,10 @@ Item {
             top: parent.top
             bottom: parent.bottom
             left: parent.left
-            right: center.left
+            right: undefined
             topMargin: Global.borderWidth
             bottomMargin: Global.borderWidth
-            leftMargin: Global.borderWidth
+            leftMargin: Global.borderWidth * 2
             rightMargin: 0
         }
 
@@ -40,7 +40,9 @@ Item {
 
             anchors.verticalCenter: parent.verticalCenter
 
-            //Clock {}
+            Clock {
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
         }
     }
 
@@ -64,7 +66,9 @@ Item {
 
             anchors.verticalCenter: parent.verticalCenter
 
-            Clock {}
+            Clock {
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
         }
     }
 
@@ -74,22 +78,24 @@ Item {
         anchors {
             top: parent.top
             bottom: parent.bottom
-            left: center.right
+            left: undefined
             right: parent.right
             topMargin: Global.borderWidth
             bottomMargin: Global.borderWidth
             leftMargin: 0
-            rightMargin: Global.borderWidth
+            rightMargin: Global.borderWidth * 2
         }
 
         spacing: Global.barContentSpacing
 
         Group {
-            id: rightGroup
+            id: rightClock
 
             anchors.verticalCenter: parent.verticalCenter
 
-            // Clock {}
+            Clock {
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
         }
     }
 }

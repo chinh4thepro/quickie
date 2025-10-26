@@ -11,5 +11,5 @@ Singleton {
 
     readonly property int borderWidth: 4
 
-    readonly property int marginSize: 20
+    readonly property int marginSize: 25
 }

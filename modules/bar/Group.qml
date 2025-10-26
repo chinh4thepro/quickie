@@ -21,7 +21,7 @@ Item {
             leftMargin: 0
             rightMargin: 0
         }
-        color: Colors.color3
+        color: Colors.color1
     }
 
     GridLayout {

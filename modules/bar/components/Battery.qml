@@ -14,6 +14,9 @@ Item {
     readonly property bool isBattery: UPower.displayDevice.isLaptopBattery
 
     implicitWidth: childrenRect.width
+    implicitHeight: childrenRect.height
+
+    visible: isBattery
 
     Text {
         id: battery

@@ -89,6 +89,16 @@ Item {
         spacing: Global.barContentSpacing
 
         Group {
+            id: rightControlsGroup
+
+            anchors.verticalCenter: parent.verticalCenter
+
+            Volume {
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+        }
+
+        Group {
             id: rightClock
 
             anchors.verticalCenter: parent.verticalCenter

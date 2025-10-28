@@ -4,6 +4,8 @@ import QtQuick
 import Quickshell
 
 Singleton {
+    id: root
+
     readonly property color backgrounda: "#262120BF"
 
     readonly property color background: "#1A1514"

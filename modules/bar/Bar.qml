@@ -6,37 +6,40 @@ import qs.globals
 
 Scope {
     id: bar
+    Variants {
+        model: Quickshell.screens
 
-    PanelWindow {
-        id: barRoot
+        PanelWindow {
+            id: barRoot
 
-        anchors {
-            top: false
-            bottom: true
-            left: true
-            right: true
-        }
+            anchors {
+                top: false
+                bottom: true
+                left: true
+                right: true
+            }
 
-        margins {
-            top: 0
-            bottom: Global.marginSize
-            left: Global.marginSize
-            right: Global.marginSize
-        }
+            margins {
+                top: 0
+                bottom: Global.marginSize
+                left: Global.marginSize
+                right: Global.marginSize
+            }
 
-        color: "transparent"
-
-        implicitHeight: Global.barHeight
-
-        Content {
-            id: content
+            color: "transparent"
 
             implicitHeight: Global.barHeight
-            anchors {
-                top: parent.top
-                bottom: parent.bottom
-                left: parent.left
-                right: parent.right
+
+            Content {
+                id: content
+
+                implicitHeight: Global.barHeight
+                anchors {
+                    top: parent.top
+                    bottom: parent.bottom
+                    left: parent.left
+                    right: parent.right
+                }
             }
         }
     }

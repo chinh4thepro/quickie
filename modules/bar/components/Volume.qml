@@ -1,6 +1,8 @@
 import QtQuick
 import Quickshell
+
 import qs.globals
+import qs.services
 
 Item {
     id: root
@@ -8,14 +10,8 @@ Item {
     implicitWidth: childrenRect.width
     implicitHeight: childrenRect.height
 
-    SystemClock {
-        id: clock
-        precision: SystemClock.Seconds
-    }
-
     Text {
-        id: time
-        text: Qt.formatDateTime(clock.date, "hh:mm:ss MM/dd/yyyy")
+        text: Audio.sinkMuted ? "Muted" : "Volume: " + Math.round(Audio.sinkVolume * 100) + "%"
         color: Colors.foreground
     }
 }
